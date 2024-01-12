@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table.movie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table.movie-table th, table.movie-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table.movie-table th {
+            background-color: #f2f2f2;
+        }
+
+        a.edit-link, a.delete-link {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-right: 5px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        a.edit-link {
+            background-color: #3498db;
+        }
+
+        a.delete-link {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+   
+
+    <!-- Table for displaying movie names -->
+    <table class="movie-table">
+        <thead>
+            <tr>
+                <th>Movie Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example row (replace with dynamic data from Django backend) -->
+            <tr>
+                <td>{{movie}}</td>
+                <td>
+                    <a href="/movies/delete/{{movie.id}}" class="delete-link">Delete</a>
+                    <a href="/delete_movie/1/" class="edit-link">Edit</a>
+                </td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+</body>
+</html>
+
